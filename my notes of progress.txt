@@ -1,0 +1,34 @@
+1) we found some datasets on economic data
+2) I'm considering a way to contruct the data in such a way that i can have
+	a main table of countries with some type of ID, then with some basic attributes.
+3) I may have to use excel or python to arrange the ID in such a way that i can distribute
+	these same ids to other work files so we can link tables through Primary/Foreign keys
+4) I've decided to use python/jupyter/pandas to create a unique ID row in the Country_profile_variables CSV so we can use it as reference.
+	4.1) I've created the primary key for the file and now need a way to convert the other CSV files according to the primary keys in country_profile_variables
+5) i'm trying to figure out a way to assign the foreign keys to the other data sets 
+...
+6) i'm going to look for other datasets then i'll try to organize the data on that.
+
+*** To Share with project mates ***
+
+7) I'm removing the economic commodity and economic calender files because they are very large and look tedious and man looking for smaller data sets to play with before
+	using big data sets which require rigorious cleaning.
+
+8) I'm adding an Economic Freedom dataset tfrom Kaggle to compensate for a smaller dataset and easier to handle data.
+	link: https://www.kaggle.com/gsutters/economic-freedom/downloads/economic-freedom.zip/1
+
+9) a recommended premise for our database, as to why we have this.
+	motivation: Doing Business in other countries by combing economic/social/environment factors of data so it provides as 
+			with a snapshot of which countries may or may not be favorable to do business in.
+Economic:
+- Tariff Data
+- Purchasing Power Parity
+- Ease of Doing Business
+- GDP
+
+Transform
+10) I read in the basic_country_variables.csv file, made the primary key there, and then read the ranking.csv file
+	a) i then matched the countries in each file to make sure both files had the same countries.
+	b) once i completely matched all countries, changed the spelling for other countries to further complete the match, and properly put them into one dataframe in read_csv_ranking.df
+	c) i then gave each country in read_csv_ranking.df their appropriate country_id so i could connect both the read_csv_primary and read_csv_ranking on an SQL platform
+	d) I just need to upload the dataframes onto SQL via SQLalchemy
