@@ -32,3 +32,8 @@ Transform
 	b) once i completely matched all countries, changed the spelling for other countries to further complete the match, and properly put them into one dataframe in read_csv_ranking.df
 	c) i then gave each country in read_csv_ranking.df their appropriate country_id so i could connect both the read_csv_primary and read_csv_ranking on an SQL platform
 	d) I just need to upload the dataframes onto SQL via SQLalchemy
+
+11) Working on Ian's JSON file, terror_data. 
+	I have been trying to compare the country name columns together but havent been able too. i only get four positive results from a list of 6000+ names
+	I found out that there are extra spaces in most of names, so i will have to conduct a python script that eliminates all spaces to the left of the string to be stripped out.
+		str.lstrip() : https://www.geeksforgeeks.org/python-pandas-series-str-strip-lstrip-and-rstrip/
